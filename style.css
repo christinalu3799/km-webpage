@@ -1,0 +1,87 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel&display=swap');
+/* COLOR THEMES */
+:root {
+    --verylight: #B8D3D1;
+    --light: #416165;
+    --medium: #a77e58;
+    --dark: #8b5d33;
+    --verydark: #0B032D;
+
+   --ff-primary: 'Noto Sans Mono', monospace;   
+    --ff-body: 'Martel', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--ff-primary);
+    font-size: 1rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%; 
+}
+
+#home {
+    background-color: var(--light);
+}
+
+#about {
+    background-color: var(--verylight);
+}
+
+#footer {
+    background-color: var(--verydark);
+}
+
+nav {
+    position: sticky; 
+    top: 0;
+    background-color: white;
+}
+
+nav .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+
+nav .container ul {
+    list-style: none;
+}
+nav .container ul li {
+    display: inline-block;
+}
+
+nav .container ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--verydark);
+    text-decoration: none;
+}
+
+nav .container ul li.active {
+    background-color: var(--verylight);
+    /* Whenever the background-color changes, it will have this transition */
+    transition: 0.3 ease background-color;
+}
+nav .container ul li.active a {
+    color: white;
+}
